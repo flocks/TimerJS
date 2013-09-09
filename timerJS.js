@@ -26,7 +26,7 @@
         if(!called) {
           clearTimeout(timeout);
           called = true;
-          callback.call(this, {error : "Process took too much time to achieve."});
+          callback.apply(this, arguments);
         }
       }
 
@@ -37,7 +37,7 @@
    }
 
 
-   return timeJS;
+   return timerJS;
 
 
 });
