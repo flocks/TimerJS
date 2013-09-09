@@ -36,7 +36,7 @@
 <p>TimerJS lets you give a timeout to your callback.</p>
 
 <p>In some cases, a callback may be called only after inner callbacks resolutions, when you are using async.each() for instance.
-I found it would be clever to be able to give a timeout to the inner callbacks in order to ensure your script will not run
+I found it would be clever <strong>in some specific cases</strong> to be able to give a timeout to the inner callbacks in order to ensure your script will not run
 "forever" if a inner callback takes too much time to be called.</p>
 
 <p>TimerJS works in the browser and in NodeJS.</p>
@@ -50,20 +50,26 @@ I found it would be clever to be able to give a timeout to the inner callbacks i
 
 <p>To use in browser environement </p>
 
-<div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s1">'javascript'</span> <span class="nx">src</span><span class="o">=</span><span class="s1">'timerJS.js'</span> <span class="o">/&gt;</span>
+<div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s1">'javascript'</span> <span class="nx">src</span><span class="o">=</span><span class="s1">'timerjs.js'</span> <span class="o">/&gt;</span>
 </pre></div>
 
 <p>In nodeJS </p>
 
 <p>Installation</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">timerJS</span>
+<div class="highlight highlight-javascript"><pre><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">timerjs</span>
 </pre></div>
 
 <p>Then </p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'timerJS'</span><span class="p">);</span>
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'timerjs'</span><span class="p">);</span>
 </pre></div>
+
+<h3>
+<a name="usecases" class="anchor" href="#usecases"><span class="octicon octicon-link"></span></a>Usecases</h3>
+
+<p>Obviously, timerJS should not be used if the data returned by your callback is very important. You should use it when
+the lack of the data doesn't affect the global behaviour of your script.</p>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
