@@ -12,19 +12,32 @@
 	     module.exports = factory();
      }
      else { // browser env
-	     root.NodeTimer = factory();
+	     root.timerJS = factory();
       }
 
    }
 
 })(this, function() {
 
-   NodeTimer = function(callback, time) {
-      var called = null;
+   timerJS = function(callback, time) {
+      var called = false;
+
+      var func = function() {
+        if(!called) {
+          clearTimeout(timeout);
+          called = true;
+          callback.call(this, {error : "Process took too much time to achieve."});
+        }
+      }
+
+      var timeout = setTimeout(func, time);
+
+      return func;
+
    }
 
 
-   return NodeTimer;
+   return timeJS;
 
 
 });
