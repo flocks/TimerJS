@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Timerjs by flocks</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Timerjs</h1>
+        <p class="header">Give a timer to your callbacks !</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/flocks/TimerJS/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/flocks/TimerJS/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/flocks/TimerJS">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/flocks">flocks</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="timerjs" class="anchor" href="#timerjs"><span class="octicon octicon-link"></span></a>TimerJS</h1>
+
+<p>TimerJS lets you give a timeout to your callback.</p>
+
+<p>In some cases, a callback may be called only after inner callbacks resolutions, when you are using async.each() for instance.
+I found it would be clever to be able to give a timeout to the inner callbacks in order to ensure your script will not run
+"forever" if a inner callback takes too much time to be called.</p>
+
+<p>TimerJS works in the browser and in NodeJS.</p>
+
+<p>All you have to do is include the script, and then</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">asyncFunction</span><span class="p">(</span><span class="nx">arg</span><span class="p">,</span> <span class="nx">timer</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="mi">100</span><span class="p">));</span>
+</pre></div>
+
+<p>The callback will be called after 100 milliseconds, if it have been not called yet.</p>
+
+<p>To use in browser environement </p>
+
+<div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s1">'javascript'</span> <span class="nx">src</span><span class="o">=</span><span class="s1">'timerJS.js'</span> <span class="o">/&gt;</span>
+</pre></div>
+
+<p>In nodeJS </p>
+
+<p>Installation</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">timerJS</span>
+</pre></div>
+
+<p>Then </p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'timerJS'</span><span class="p">);</span>
+</pre></div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
