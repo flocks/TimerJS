@@ -16,3 +16,19 @@ asyncFunction(arg, timer(callback, 100));
 ````
 The callback will be called after 100 milliseconds, if it have been not called yet.
 
+To use in browser environement 
+````javascript
+<script type='javascript' src='timerJS.js' />
+````
+In nodeJS 
+
+Installation
+
+````javascript
+npm install timerJS
+````
+
+Then 
+````javascript
+var timer = require('timerJS');
+````
