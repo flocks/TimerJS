@@ -25,10 +25,10 @@ In nodeJS
 Installation
 
 ````javascript
-npm install timerJS
+npm install timerjs
 ````
 
 Then 
 ````javascript
-var timer = require('timerJS');
+var timer = require('timerjs');
 ````

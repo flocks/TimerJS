@@ -1,0 +1,6 @@
+{
+	"name" : "timerjs",
+	"version" : "0.0.1",
+	"description" : "Give a timer to your callbacks",
+	"keywords" : "callback, timer, timeout"
+}
