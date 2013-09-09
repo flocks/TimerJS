@@ -19,7 +19,7 @@
 
 })(this, function() {
 
-   timerJS = function(callback, time) {
+   var timerJS = function(callback, time) {
       var called = false;
 
       var func = function() {
