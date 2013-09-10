@@ -14,7 +14,7 @@ All you have to do is include the script, and then
 ````javascript
 asyncFunction(arg, timer(callback, 100));
 ````
-The callback will be called after 100 milliseconds, if it have been not called yet.
+The callback will be called after 100 milliseconds, if it has been not called yet.
 
 To use in browser environement 
 ````javascript
